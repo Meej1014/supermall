@@ -1,26 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <router-view></router-view>
+    <TabbarMain></TabbarMain>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import TabbarMain from './components/tabbar/tabbarMain.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  // 使用组件时,大写的组件可以用'-'相连,不会报错
+  export default {
+    name: 'App',
+    components: {
+      TabbarMain
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import url("./assets/base.css");
 </style>
